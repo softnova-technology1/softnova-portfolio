@@ -29,7 +29,7 @@
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.15em;
-  color: #2563eb;
+  color: var(--medium-slate-blue);
   text-transform: uppercase;
   margin-bottom: 1.5rem;
 }
@@ -44,7 +44,7 @@
 }
 
 .accent {
-  color: #2563eb;
+  color: var(--medium-slate-blue);
 }
 
 .description {
@@ -61,12 +61,12 @@
 }
 
 .btnPrimary {
-  background-color: #2563eb;
+  background: var(--gradient-main);
   color: white;
   padding: 1rem 2.5rem;
   border-radius: 50px;
   font-weight: 600;
-  box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 10px 20px -5px rgba(113, 97, 239, 0.4);
 }
 
 .btnSecondary {
@@ -110,7 +110,7 @@
 }
 
 .visionCard {
-  background-color: #2563eb;
+  background: var(--gradient-main);
   color: white;
   position: relative;
   overflow: hidden;
@@ -126,8 +126,8 @@
 }
 
 .missionIcon {
-  background-color: #eff6ff;
-  color: #2563eb;
+  background-color: var(--powder-petal);
+  color: var(--medium-slate-blue);
 }
 
 .visionIcon {
@@ -220,7 +220,7 @@
 .featIcon {
   width: 48px;
   height: 48px;
-  background-color: #2563eb;
+  background-color: var(--medium-slate-blue);
   color: white;
   border-radius: 0.75rem;
   display: flex;
@@ -247,7 +247,7 @@
 }
 
 .ctaBox {
-  background-color: #2563eb;
+  background: var(--gradient-main);
   border-radius: 3rem;
   padding: 6rem 4rem;
   text-align: center;
@@ -295,7 +295,7 @@
 
 .ctaBtn {
   background-color: #fff;
-  color: #2563eb;
+  color: var(--medium-slate-blue);
   padding: 1.25rem 3rem;
   border-radius: 50px;
   font-weight: 700;

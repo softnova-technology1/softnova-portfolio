@@ -35,7 +35,7 @@
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.1em;
-  color: #3b82f6;
+  color: var(--medium-slate-blue);
   text-transform: uppercase;
   margin-bottom: 1.5rem;
 }
@@ -95,7 +95,7 @@
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.1em;
-  color: #3b82f6;
+  color: var(--medium-slate-blue);
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
@@ -162,7 +162,7 @@
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.1em;
-  color: #3b82f6;
+  color: var(--medium-slate-blue);
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
@@ -202,13 +202,13 @@
 .iconWrapper {
   width: 48px;
   height: 48px;
-  background-color: #eff6ff;
+  background-color: var(--mauve);
   border-radius: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 2rem;
-  color: #3b82f6;
+  color: var(--medium-slate-blue);
 }
 
 .cardTitle {
@@ -255,7 +255,7 @@
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.2em;
-  color: #3b82f6;
+  color: var(--medium-slate-blue);
   text-transform: uppercase;
   margin-bottom: 1.5rem;
 }

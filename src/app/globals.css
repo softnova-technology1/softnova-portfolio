@@ -1,18 +1,29 @@
 :root {
-  --primary: #2563eb;
-  --primary-hover: #1d4ed8;
-  --secondary: #6366f1;
-  --accent: #f0f9ff;
+  /* New Color Palette */
+  --powder-petal: #efd9ce;
+  --mauve: #dec0f1;
+  --wisteria: #b79ced;
+  --soft-periwinkle: #957fef;
+  --medium-slate-blue: #7161ef;
+
+  --primary: var(--medium-slate-blue);
+  --primary-hover: var(--soft-periwinkle);
+  --secondary: var(--wisteria);
+  --accent: var(--mauve);
+  --soft-bg: var(--powder-petal);
+  
   --background: #ffffff;
-  --foreground: #0f172a;
+  --foreground: #2d2633; /* Slightly warmer dark color */
   --card-bg: #ffffff;
-  --card-border: #e2e8f0;
-  --text-muted: #64748b;
+  --card-border: #f0e6e1;
+  --text-muted: #7c6f85;
   --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-border: rgba(239, 217, 206, 0.3);
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --gradient-main: linear-gradient(135deg, var(--medium-slate-blue), var(--wisteria));
+  --gradient-soft: linear-gradient(135deg, var(--mauve), var(--powder-petal));
 }
 
 [data-theme='dark'] {

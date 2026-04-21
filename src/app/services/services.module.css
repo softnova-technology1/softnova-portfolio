@@ -9,7 +9,7 @@
 }
 
 .subheading {
-  color: #2563eb;
+  color: var(--medium-slate-blue);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -31,7 +31,7 @@
 }
 
 .accentText {
-  color: #2563eb;
+  color: var(--medium-slate-blue);
 }
 
 .description {
@@ -136,7 +136,7 @@
 }
 
 .blueCard {
-  background: #2563eb;
+  background: var(--gradient-main);
   color: white;
 }
 
@@ -246,7 +246,7 @@
 }
 
 .checkIcon {
-  color: #2563eb;
+  color: var(--medium-slate-blue);
   background: white;
   border-radius: 50%;
   padding: 2px;
@@ -292,7 +292,7 @@
   display: block;
   font-size: 2.5rem;
   font-weight: 800;
-  color: #2563eb;
+  color: var(--medium-slate-blue);
 }
 
 .statLabel {
@@ -332,12 +332,12 @@
 }
 
 .darkBlue {
-  background: #1e40af;
+  background: var(--medium-slate-blue);
   color: white;
 }
 
 .mediumBlue {
-  background: #3b82f6;
+  background: var(--soft-periwinkle);
   color: white;
 }
 

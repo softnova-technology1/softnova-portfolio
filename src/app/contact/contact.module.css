@@ -28,8 +28,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: #e0e7ff;
-  color: #4338ca;
+  background-color: var(--powder-petal);
+  color: var(--medium-slate-blue);
   padding: 0.5rem 1rem;
   border-radius: 50px;
   font-size: 0.75rem;
@@ -41,7 +41,7 @@
 .dot {
   width: 8px;
   height: 8px;
-  background-color: #6366f1;
+  background-color: var(--soft-periwinkle);
   border-radius: 50%;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .accent {
-  background: linear-gradient(135deg, #2563eb, #6366f1);
+  background: var(--gradient-main);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -82,12 +82,12 @@
 .iconBox {
   width: 52px;
   height: 52px;
-  background-color: #fff;
+  background-color: var(--mauve);
   border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2563eb;
+  color: var(--medium-slate-blue);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   flex-shrink: 0;
 }
@@ -167,8 +167,8 @@
 
 .inputField:focus, .textareaField:focus, .selectField:focus {
   background-color: #fff;
-  border-color: #2563eb;
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+  border-color: var(--medium-slate-blue);
+  box-shadow: 0 0 0 4px rgba(113, 97, 239, 0.1);
 }
 
 .textareaField {
@@ -178,7 +178,7 @@
 
 .submitBtn {
   width: 100%;
-  background-color: #0559ce;
+  background: var(--gradient-main);
   color: white;
   padding: 1.25rem;
   border-radius: 12px;
@@ -189,11 +189,12 @@
   justify-content: center;
   gap: 0.75rem;
   margin-top: 1rem;
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border: none;
 }
 
 .submitBtn:hover {
-  background-color: #0449aa;
+  opacity: 0.9;
   transform: translateY(-2px);
 }
 
@@ -205,7 +206,7 @@
 }
 
 .legalText a {
-  color: #3b82f6;
+  color: var(--medium-slate-blue);
   font-weight: 600;
 }
 
