@@ -1,9 +1,12 @@
 .section {
-  padding: 60px 0;
-  background: white;
-  border-top: 1px solid var(--card-border);
-  border-bottom: 1px solid var(--card-border);
+  padding: 80px 0;
+  /* background: #f4f9ff; */
+  /* border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); */
   overflow: hidden;
+  /* Edge-fading mask for "neat" transition */
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 .container {
@@ -12,26 +15,58 @@
 
 .track {
   display: flex;
-  gap: 4rem;
+  gap: 3rem;
   width: max-content;
   animation: scroll 40s linear infinite;
+  align-items: center;
+  padding-right: 3rem; 
 }
 
-.techItem {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #e2e8f0;
-  letter-spacing: 2px;
-  white-space: nowrap;
+.techCircle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #f4f9ff; /* Reverting to dark circles for contrast on light bg as seen in screenshot */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: var(--transition);
+  flex-shrink: 0;
+  padding: 22px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.techItem:hover {
-  color: var(--primary);
-  transform: scale(1.1);
+.techCircle:hover {
+  transform: translateY(-8px) scale(1.1);
+  background: #1a1930;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: contrast(1.1);
 }
 
 @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(calc(-33.33%)); } 
+}
+
+@media (max-width: 768px) {
+  .track {
+    gap: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .techCircle {
+    width: 80px;
+    height: 80px;
+    padding: 18px;
+  }
+  .section {
+    padding: 60px 0;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  }
 }
