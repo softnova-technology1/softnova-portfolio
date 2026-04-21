@@ -1,0 +1,162 @@
+.section {
+  padding: 100px 0;
+  background: white;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  gap: 4rem;
+}
+
+.sidebar {
+  flex: 0 0 300px;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  letter-spacing: -1px;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tab {
+  text-align: left;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  background: #f8fafc;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.tab:hover {
+  background: #f1f5f9;
+  color: var(--foreground);
+}
+
+.activeTab {
+  background: #e2e8f0;
+  color: var(--primary);
+  box-shadow: inset 0 0 0 2px var(--primary);
+}
+
+.tabArrow {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: var(--transition);
+}
+
+.activeTab .tabArrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.displayCard {
+  background: #1e293b;
+  height: 350px;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.4) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.4) 0px, transparent 50%);
+}
+
+.darkOverlay {
+  text-align: center;
+  padding: 3rem;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  width: 80%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tagline {
+  font-size: 1rem;
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.mainTitle {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.detailText {
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.pointsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.pointCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  display: flex;
+  gap: 1.25rem;
+}
+
+.pointIcon {
+  color: var(--primary);
+  font-size: 1.25rem;
+}
+
+.pointText h5 {
+  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+}
+
+.pointText p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 1024px) {
+  .container { flex-direction: column; }
+  .sidebar { flex: 1; }
+  .tabs { flex-direction: row; flex-wrap: wrap; }
+  .tab { flex: 1; min-width: 200px; }
+}
+
+@media (max-width: 768px) {
+  .mainTitle { font-size: 2.5rem; }
+  .pointsGrid { grid-template-columns: 1fr; }
+}

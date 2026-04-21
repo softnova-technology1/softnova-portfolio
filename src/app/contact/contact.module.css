@@ -1,0 +1,273 @@
+.contactPage {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding-top: 120px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  padding-bottom: 8rem;
+}
+
+/* Left Info Section */
+.infoSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.statusTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #e0e7ff;
+  color: #4338ca;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  width: fit-content;
+  letter-spacing: 0.05em;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #6366f1;
+  border-radius: 50%;
+}
+
+.title {
+  font-family: var(--font-outfit);
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 2.5rem 0;
+  color: #111827;
+}
+
+.accent {
+  background: linear-gradient(135deg, #2563eb, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 4rem;
+  max-width: 500px;
+}
+
+.advantageList {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.advantageItem {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.iconBox {
+  width: 52px;
+  height: 52px;
+  background-color: #fff;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+}
+
+.advTitle {
+  font-family: var(--font-outfit);
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+}
+
+.advDesc {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Right Form Section */
+.formWrapper {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -1.25rem;
+  right: 2rem;
+  background-color: #111;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 10;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.formCard {
+  background-color: #fff;
+  padding: 4rem 3rem 3rem;
+  border-radius: 3rem;
+  box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.05);
+}
+
+.formGroup {
+  margin-bottom: 2rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.fieldLabel {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.inputField, .textareaField, .selectField {
+  width: 100%;
+  background-color: #f3f4f6;
+  border: 1px solid transparent;
+  padding: 1.125rem 1.5rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.inputField:focus, .textareaField:focus, .selectField:focus {
+  background-color: #fff;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.textareaField {
+  min-height: 150px;
+  resize: none;
+}
+
+.submitBtn {
+  width: 100%;
+  background-color: #0559ce;
+  color: white;
+  padding: 1.25rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.submitBtn:hover {
+  background-color: #0449aa;
+  transform: translateY(-2px);
+}
+
+.legalText {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.legalText a {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+/* Trusted By Section */
+.trustedBar {
+  background-color: #eee;
+  background: rgba(0, 0, 0, 0.02);
+  padding: 4rem 3rem;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.trustedLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.logoRow {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.logoText {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #4b5563;
+  letter-spacing: -0.02em;
+  opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .title {
+    font-size: 3.5rem;
+  }
+  
+  .trustedBar {
+    flex-direction: column;
+    gap: 2.5rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+  
+  .logoRow {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+}

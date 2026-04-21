@@ -1,0 +1,37 @@
+.section {
+  padding: 60px 0;
+  background: white;
+  border-top: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--card-border);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+}
+
+.track {
+  display: flex;
+  gap: 4rem;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+.techItem {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #e2e8f0;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.techItem:hover {
+  color: var(--primary);
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

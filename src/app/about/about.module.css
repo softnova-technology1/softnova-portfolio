@@ -1,0 +1,333 @@
+.aboutPage {
+  background-color: #f8f9fa;
+  color: #1a1a1a;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+  padding: 10rem 0 6rem;
+  background-color: #f8f9fa;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.label {
+  display: block;
+  font-family: var(--font-outfit);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: #2563eb;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-family: var(--font-outfit);
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #111827;
+}
+
+.accent {
+  color: #2563eb;
+}
+
+.description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 3rem;
+  max-width: 550px;
+}
+
+.heroBtns {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btnPrimary {
+  background-color: #2563eb;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.4);
+}
+
+.btnSecondary {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #1f2937;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.heroImageWrapper {
+  position: relative;
+  height: 550px;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.1);
+}
+
+/* Mission & Vision */
+.missionVision {
+  padding: 4rem 0;
+}
+
+.mvGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.mvCard {
+  padding: 4rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.missionCard {
+  background-color: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.visionCard {
+  background-color: #2563eb;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.mvIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.missionIcon {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.visionIcon {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  color: white;
+}
+
+.mvTitle {
+  font-family: var(--font-outfit);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.mvText {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* Why SoftNova Section */
+.whySection {
+  padding: 8rem 0;
+}
+
+.whyHeader {
+  margin-bottom: 4rem;
+}
+
+.whyTitle {
+  font-family: var(--font-outfit);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.whyDesc {
+  color: #6b7280;
+  font-size: 1.125rem;
+  max-width: 600px;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.largeFeature {
+  background-color: #f3f4f6;
+  padding: 4rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 500px;
+}
+
+.rightColumn {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.mediumFeature {
+  background-color: #e5e7eb;
+  padding: 3rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.smallGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.smallFeature {
+  background-color: #fff;
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid #f3f4f6;
+}
+
+.featIcon {
+  width: 48px;
+  height: 48px;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.featTitle {
+  font-family: var(--font-outfit);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.featDesc {
+  color: #6b7280;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 6rem 0;
+}
+
+.ctaBox {
+  background-color: #2563eb;
+  border-radius: 3rem;
+  padding: 6rem 4rem;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  background-image: 
+    linear-gradient(45deg, #fff 25%, transparent 25%),
+    linear-gradient(-45deg, #fff 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #fff 75%),
+    linear-gradient(-45deg, transparent 75%, #fff 75%);
+  background-size: 60px 60px;
+  background-position: 0 0, 0 30px, 30px 30px, 30px 0;
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 2;
+}
+
+.ctaTitle {
+  font-family: var(--font-outfit);
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.ctaDesc {
+  font-size: 1.25rem;
+  opacity: 0.8;
+  margin-bottom: 3.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaBtn {
+  background-color: #fff;
+  color: #2563eb;
+  padding: 1.25rem 3rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  transition: transform 0.3s ease;
+}
+
+.ctaBtn:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .heroGrid, .mvGrid, .featureGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .heroImageWrapper {
+    height: 400px;
+  }
+  
+  .ctaTitle {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .smallGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mvCard, .largeFeature, .mediumFeature {
+    padding: 2.5rem;
+  }
+}
