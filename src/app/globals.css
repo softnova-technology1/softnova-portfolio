@@ -1,29 +1,31 @@
 :root {
-  /* New Color Palette */
-  --powder-petal: #efd9ce;
-  --mauve: #dec0f1;
-  --wisteria: #b79ced;
-  --soft-periwinkle: #957fef;
-  --medium-slate-blue: #7161ef;
+  /* Ocean Blue Palette */
+  --deep-navy: #001d39;
+  --royal-blue: #0a4174;
+  --medium-ocean: #49769f;
+  --teal-blue: #4e8ea2;
+  --light-teal: #6ea2b3;
+  --sky-blue: #7bbde8;
+  --pale-ocean: #bdd8e9;
 
-  --primary: var(--medium-slate-blue);
-  --primary-hover: var(--soft-periwinkle);
-  --secondary: var(--wisteria);
-  --accent: var(--mauve);
-  --soft-bg: var(--powder-petal);
+  --primary: var(--royal-blue);
+  --primary-hover: var(--medium-ocean);
+  --secondary: var(--teal-blue);
+  --accent: var(--sky-blue);
+  --soft-bg: var(--pale-ocean);
   
-  --background: #ffffff;
-  --foreground: #2d2633; /* Slightly warmer dark color */
+  --background: #f4f9ff;
+  --foreground: var(--deep-navy);
   --card-bg: #ffffff;
-  --card-border: #f0e6e1;
-  --text-muted: #7c6f85;
+  --card-border: var(--pale-ocean);
+  --text-muted: var(--medium-ocean);
   --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(239, 217, 206, 0.3);
+  --glass-border: rgba(189, 216, 233, 0.3);
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --gradient-main: linear-gradient(135deg, var(--medium-slate-blue), var(--wisteria));
-  --gradient-soft: linear-gradient(135deg, var(--mauve), var(--powder-petal));
+  --gradient-main: linear-gradient(135deg, var(--royal-blue), var(--teal-blue));
+  --gradient-soft: linear-gradient(135deg, var(--sky-blue), var(--pale-ocean));
 }
 
 [data-theme='dark'] {
@@ -50,9 +52,15 @@ body {
 }
 
 body {
+  background-color: var(--background);
   color: var(--foreground);
-  background: var(--background);
   font-family: var(--font-body);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(123, 189, 232, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(78, 142, 162, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(189, 216, 233, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(10, 65, 116, 0.05) 0px, transparent 50%);
+  background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;

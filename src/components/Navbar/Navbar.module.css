@@ -8,8 +8,9 @@
   align-items: center;
   z-index: 1000;
   padding: 0 2rem;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
+  /* background: rgba(255, 255, 255, 0.8); */
+  background: #f1f7ff !important;
+  /* backdrop-filter: blur(10px); */
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 

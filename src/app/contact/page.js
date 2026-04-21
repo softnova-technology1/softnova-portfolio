@@ -7,7 +7,10 @@ import {
   Zap, 
   ShieldCheck, 
   Clock, 
-  ArrowRight 
+  ArrowRight,
+  MapPin,
+  Mail,
+  Phone
 } from 'lucide-react';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
@@ -105,7 +108,7 @@ export default function ContactPage() {
               <Clock size={16} />
               <span>Response Time: We respond within 24 hours</span>
             </motion.div>
-
+ 
             <motion.div 
               className={styles.formCard}
               initial={{ opacity: 0, scale: 0.95 }}
@@ -124,6 +127,25 @@ export default function ContactPage() {
                   </div>
                 </div>
 
+                <div className={styles.formRow}>
+                  <div className={styles.formGroup}>
+                    <label className={styles.fieldLabel}>Phone Number</label>
+                    <input type="tel" placeholder="+91 00000 00000" className={styles.inputField} />
+                  </div>
+                  <div className={styles.formGroup}>
+                    <label className={styles.fieldLabel}>Project Type</label>
+                    <select className={styles.selectField}>
+                      <option value="">Select a type</option>
+                      <option value="web">Web Development</option>
+                      <option value="app">Mobile App</option>
+                      <option value="erp">ERP Solution</option>
+                      <option value="design">Graphic Design</option>
+                      <option value="marketing">Digital Marketing</option>
+                      <option value="other">Other (Custom)</option>
+                    </select>
+                  </div>
+                </div>
+
                 <div className={styles.formGroup}>
                   <label className={styles.fieldLabel}>Project Budget</label>
                   <select className={styles.selectField}>
@@ -136,7 +158,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className={styles.formGroup}>
-                  <label className={styles.fieldLabel}>Your Vision</label>
+                  <label className={styles.fieldLabel}>Your Vision / Requirement</label>
                   <textarea 
                     placeholder="Tell us about your project goals..." 
                     className={styles.textareaField}
@@ -154,21 +176,55 @@ export default function ContactPage() {
             </motion.div>
           </div>
         </div>
-
-        {/* Trusted By Bar */}
         <motion.div 
-          className={styles.trustedBar}
-          {...fadeInUp}
+          className={styles.quickContact}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
         >
-          <span className={styles.trustedLabel}>TRUSTED GLOBALLY BY</span>
-          <div className={styles.logoRow}>
-            <span className={styles.logoText}>LUMOS</span>
-            <span className={styles.logoText}>KINETIC.</span>
-            <span className={styles.logoText}>OXYGN</span>
-            <span className={styles.logoText}>ZEPHYR</span>
+          <div className={styles.contactPoint}>
+            <div className={styles.contactIcon}>
+              <MapPin size={24} />
+            </div>
+            <p className={styles.contactText}>
+              1st Floor, Softnova Appartment, SNV Mahal back side, near SBI bank, Peravurani.
+            </p>
+          </div>
+
+          <div className={styles.contactPoint}>
+            <div className={styles.contactIcon}>
+              <Mail size={24} />
+            </div>
+            <p className={styles.contactText}>info@softnovatech.com</p>
+          </div>
+
+          <div className={styles.contactPoint}>
+            <div className={styles.contactIcon}>
+              <Phone size={24} />
+            </div>
+            <p className={styles.contactText}>+91 6385118083</p>
           </div>
         </motion.div>
       </main>
+
+      {/* Map Section */}
+      <motion.section 
+        className={styles.mapSection}
+        {...fadeInUp}
+      >
+        <div className={styles.mapWrapper}>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7851.263486223861!2d79.20632872303162!3d10.291226416297494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a16e9c50ca4939d%3A0x646da28beabf28ab!2sSoftnova%20Technology!5e0!3m2!1sen!2sin!4v1776753992378!5m2!1sen!2sin" 
+            width="100%" 
+            height="500" 
+            style={{ border: 0 }} 
+            allowFullScreen="" 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </motion.section>
 
       <Footer />
     </div>

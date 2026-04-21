@@ -13,7 +13,11 @@ import {
   Zap, 
   TrendingUp, 
   CheckCircle2, 
-  MousePointer2 
+  MousePointer2,
+  ShoppingBag,
+  Megaphone,
+  Palette,
+  Settings2
 } from 'lucide-react';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
@@ -179,6 +183,166 @@ const services = [
         'Ethical & secure AI frameworks'
       ]
     }
+  },
+  {
+    id: 'ecommerce',
+    title: 'E-Commerce Portal',
+    sub: 'Digital store-fronts',
+    icon: <ShoppingBag size={20} />,
+    description: 'Building high-conversion e-commerce platforms with seamless checkout experiences and robust inventory management.',
+    features: [
+      {
+        title: 'The Friction',
+        desc: 'Complex checkout flows and slow product loading leading to cart abandonment.',
+        icon: <AlertCircle size={20} />,
+        type: 'red'
+      },
+      {
+        title: 'The Experience',
+        desc: 'One-click payments and lightning-fast product filtering for a frictionless journey.',
+        icon: <Zap size={20} />,
+        type: 'blue-bg'
+      },
+      {
+        title: 'The Growth',
+        desc: 'Advanced analytics and marketing automation to maximize customer lifetime value.',
+        icon: <TrendingUp size={20} />,
+        type: 'purple'
+      }
+    ],
+    visuals: {
+      type: 'immersive',
+      title: 'Global Retail',
+      desc: 'Storefronts built for performance.'
+    },
+    performance: {
+      title: 'Conversion Stats',
+      items: [
+        'Multi-currency support',
+        'Headless commerce architecture',
+        'Dynamic inventory syncing'
+      ]
+    }
+  },
+  {
+    id: 'marketing',
+    title: 'Digital Marketing',
+    sub: 'Strategic growth',
+    icon: <Megaphone size={20} />,
+    description: 'Driving targeted traffic and high-value conversions through data-driven digital marketing strategies.',
+    features: [
+      {
+        title: 'The Noise',
+        desc: 'Saturated markets and inefficient ad spend leading to low ROI.',
+        icon: <AlertCircle size={20} />,
+        type: 'red'
+      },
+      {
+        title: 'The Strategy',
+        desc: 'Precision targeting and content automation to cut through the digital noise.',
+        icon: <Zap size={20} />,
+        type: 'blue-bg'
+      },
+      {
+        title: 'The ROI',
+        desc: 'Visible growth and scalable lead generation frameworks.',
+        icon: <TrendingUp size={20} />,
+        type: 'purple'
+      }
+    ],
+    visuals: {
+      type: 'immersive',
+      title: 'Growth Engines',
+      desc: 'Campaigns that convert.'
+    },
+    performance: {
+      title: 'Marketing Metrics',
+      items: [
+        'SEO & SEM optimization',
+        'Data-driven social strategies',
+        'Automated lead nurturing'
+      ]
+    }
+  },
+  {
+    id: 'design',
+    title: 'Graphic Design',
+    sub: 'Visual identity',
+    icon: <Palette size={20} />,
+    description: 'Creating stunning visual identities and digital assets that resonate with your brand soul.',
+    features: [
+      {
+        title: 'The Clutter',
+        desc: 'Generic branding and inconsistent visual presence across platforms.',
+        icon: <AlertCircle size={20} />,
+        type: 'red'
+      },
+      {
+        title: 'The Art',
+        desc: 'Besproke design languages that bridge the gap between art and engineering.',
+        icon: <Zap size={20} />,
+        type: 'blue-bg'
+      },
+      {
+        title: 'The Brand',
+        desc: 'A cohesive digital soul that connects deeply with your target audience.',
+        icon: <TrendingUp size={20} />,
+        type: 'purple'
+      }
+    ],
+    visuals: {
+      type: 'immersive',
+      title: 'Brand Aura',
+      desc: 'Design that leaves a mark.'
+    },
+    performance: {
+      title: 'Design Philosophy',
+      items: [
+        'High-fidelity brand manuals',
+        'Custom motion graphics',
+        'Typography-driven UI'
+      ]
+    }
+  },
+  {
+    id: 'erp',
+    title: 'ERP Solutions',
+    sub: 'Enterprise systems',
+    icon: <Settings2 size={20} />,
+    description: 'Custom Enterprise Resource Planning solutions that streamline complex business operations into a unified dashboard.',
+    features: [
+      {
+        title: 'The Chaos',
+        desc: 'Disconnected departments and manual data entry slowing down operations.',
+        icon: <AlertCircle size={20} />,
+        type: 'red'
+      },
+      {
+        title: 'The Unity',
+        desc: 'Centralized data core and automated report generation for total clarity.',
+        icon: <Zap size={20} />,
+        type: 'blue-bg'
+      },
+      {
+        title: 'The Speed',
+        desc: 'Operational efficiency that empowers team decision-making at scale.',
+        icon: <TrendingUp size={20} />,
+        type: 'purple'
+      }
+    ],
+    visuals: {
+      type: 'immersive',
+      title: 'Operation Hub',
+      desc: 'Total control in one view.'
+    },
+    performance: {
+      title: 'System Stability',
+      items: [
+        'Real-time resource tracking',
+        'Custom module integration',
+        'Bank-grade data security'
+      ]
+    }
   }
 ];
 
@@ -191,32 +355,64 @@ export default function ServicesPage() {
       
       <main className="container">
         <section className={styles.hero}>
-          <motion.span 
-            className={styles.subheading}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+          <div className={styles.heroContent}>
+            <motion.span 
+              className={styles.subheading}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              Our Craftsmanship
+            </motion.span>
+            <motion.h1 
+              className={styles.heroTitle}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              Digital Precision. <br />
+              <span className={styles.accentText}>Ethereal Motion.</span>
+            </motion.h1>
+            <motion.p 
+              className={styles.description}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              We don't just build software; we curate atmospheric digital experiences 
+              that harmonize high-performance engineering with editorial aesthetics.
+            </motion.p>
+          </div>
+
+          <motion.div 
+            className={styles.heroImageWrapper}
+            initial={{ opacity: 0, scale: 0.9, x: 20 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
           >
-            Our Craftsmanship
-          </motion.span>
-          <motion.h1 
-            className={styles.heroTitle}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            Digital Precision. 
-            <span className={styles.accentText}>Ethereal Motion.</span>
-          </motion.h1>
-          <motion.p 
-            className={styles.description}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            We don't just build software; we curate atmospheric digital experiences 
-            that harmonize high-performance engineering with editorial aesthetics.
-          </motion.p>
+            <div className={styles.heroImageInner}>
+              <Image 
+                src="/images/network_mesh.png"
+                alt="Digital Mesh"
+                fill
+                style={{ objectFit: 'cover' }}
+                priority
+              />
+            </div>
+            
+            <motion.div 
+              className={styles.floatingCard}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1, duration: 0.6 }}
+            >
+              <div className={styles.cardIcon}><Zap size={20} /></div>
+              <div className={styles.cardText}>
+                <span className={styles.cardLabel}>Real-time processing</span>
+                <span className={styles.cardValue}>99.9% Efficiency</span>
+              </div>
+            </motion.div>
+          </motion.div>
         </section>
 
         <section className={styles.mainSection}>
