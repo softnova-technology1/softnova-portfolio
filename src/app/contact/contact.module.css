@@ -1,5 +1,6 @@
 .contactPage {
-  background-color: #f8f9fa;
+  /* background-color: #f8f9fa; */
+  background: #f4f9ff;
   min-height: 100vh;
   padding-top: 120px;
 }
@@ -15,7 +16,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
   align-items: center;
-  padding-bottom: 8rem;
+  padding-bottom: 3rem;
 }
 
 /* Left Info Section */
@@ -28,8 +29,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: var(--powder-petal);
-  color: var(--medium-slate-blue);
+  background-color: var(--soft-bg);
+  color: var(--primary);
   padding: 0.5rem 1rem;
   border-radius: 50px;
   font-size: 0.75rem;
@@ -41,7 +42,7 @@
 .dot {
   width: 8px;
   height: 8px;
-  background-color: var(--soft-periwinkle);
+  background-color: var(--primary-hover);
   border-radius: 50%;
 }
 
@@ -82,12 +83,12 @@
 .iconBox {
   width: 52px;
   height: 52px;
-  background-color: var(--mauve);
+  background-color: var(--soft-bg);
   border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--medium-slate-blue);
+  color: var(--primary);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   flex-shrink: 0;
 }
@@ -141,7 +142,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
 .fieldLabel {
@@ -167,7 +168,7 @@
 
 .inputField:focus, .textareaField:focus, .selectField:focus {
   background-color: #fff;
-  border-color: var(--medium-slate-blue);
+  border-color: var(--primary);
   box-shadow: 0 0 0 4px rgba(113, 97, 239, 0.1);
 }
 
@@ -206,42 +207,72 @@
 }
 
 .legalText a {
-  color: var(--medium-slate-blue);
+  color: var(--primary);
   font-weight: 600;
 }
 
-/* Trusted By Section */
-.trustedBar {
-  background-color: #eee;
-  background: rgba(0, 0, 0, 0.02);
-  padding: 4rem 3rem;
+/* Map Section */
+.mapSection {
+  margin-bottom: 0;
+  width: 100vw;
+  position: relative;
+}
+
+.mapWrapper {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.1);
+}
+
+.mapWrapper iframe {
+  display: block;
+}
+
+/* Quick Contact Section */
+.quickContact {
+  margin: 1rem 0 3rem;
+  padding: 3rem;
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
   border-radius: 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 6rem;
-}
-
-.trustedLabel {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #9ca3af;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.logoRow {
-  display: flex;
-  gap: 4rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 2rem;
   align-items: center;
 }
 
-.logoText {
-  font-weight: 800;
-  font-size: 1.5rem;
-  color: #4b5563;
-  letter-spacing: -0.02em;
-  opacity: 0.7;
+.contactPoint {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contactIcon {
+  width: 64px;
+  height: 64px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0369a1;
+  box-shadow: 0 10px 25px rgba(3, 105, 161, 0.08);
+  flex-shrink: 0;
+}
+
+.contactText {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0c4a6e;
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .quickContact {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem;
+  }
 }
 
 @media (max-width: 1024px) {

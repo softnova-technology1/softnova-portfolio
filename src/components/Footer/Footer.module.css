@@ -103,7 +103,25 @@
 
 .socials {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
+}
+
+.socialLink {
+  width: 44px;
+  height: 44px;
+  background-color: #f1f5f9;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #334155;
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  background-color: var(--primary);
+  color: white;
+  transform: translateY(-3px);
 }
 
 @media (max-width: 1024px) {

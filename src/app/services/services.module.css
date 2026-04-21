@@ -5,11 +5,20 @@
 }
 
 .hero {
-  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 6rem;
+  margin-bottom: 80px;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
 }
 
 .subheading {
-  color: var(--medium-slate-blue);
+  color: var(--primary);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -19,9 +28,9 @@
 }
 
 .heroTitle {
+  font-family: var(--font-outfit);
   font-size: 4.5rem;
-  color: #0f172a;
-  max-width: 800px;
+  color: var(--foreground);
   line-height: 1.1;
   margin-bottom: 1.5rem;
 }
@@ -31,14 +40,71 @@
 }
 
 .accentText {
-  color: var(--medium-slate-blue);
+  color: var(--primary);
 }
 
 .description {
   font-size: 1.125rem;
-  color: #64748b;
+  color: var(--text-muted);
   max-width: 600px;
   line-height: 1.6;
+}
+
+.heroImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 450px;
+}
+
+.heroImageInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  box-shadow: 0 40px 100px -20px rgba(10, 65, 116, 0.2);
+}
+
+.floatingCard {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 5;
+}
+
+.cardIcon {
+  width: 40px;
+  height: 40px;
+  background: var(--soft-bg);
+  color: var(--primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardText span {
+  display: block;
+}
+
+.cardLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cardValue {
+  font-weight: 700;
+  color: var(--foreground);
 }
 
 .mainSection {
@@ -52,6 +118,22 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  max-height: 800px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--pale-ocean);
+  border-radius: 10px;
 }
 
 .serviceNav {
@@ -246,7 +328,7 @@
 }
 
 .checkIcon {
-  color: var(--medium-slate-blue);
+  color: var(--primary);
   background: white;
   border-radius: 50%;
   padding: 2px;
@@ -292,7 +374,7 @@
   display: block;
   font-size: 2.5rem;
   font-weight: 800;
-  color: var(--medium-slate-blue);
+  color: var(--primary);
 }
 
 .statLabel {
@@ -332,12 +414,12 @@
 }
 
 .darkBlue {
-  background: var(--medium-slate-blue);
+  background: var(--primary);
   color: white;
 }
 
 .mediumBlue {
-  background: var(--soft-periwinkle);
+  background: var(--primary-hover);
   color: white;
 }
 
@@ -348,8 +430,14 @@
 }
 
 @media (max-width: 1024px) {
-  .mainSection {
+  .hero {
     grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .heroImageWrapper {
+    height: 350px;
+    order: -1;
   }
   .sidebar {
     flex-direction: row;
