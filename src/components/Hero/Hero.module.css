@@ -32,8 +32,7 @@
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 4rem;
-  align-items: center;
-  
+  align-items: center; 
 }
 
 .content {
@@ -55,7 +54,7 @@
   width: 50px;
   height: 2px;
   background: #f3f4f6;
-}
+}   
 
 .title {
   font-family: 'Playfair Display', serif; /* Using a serif font for that luxury feel */
@@ -83,7 +82,7 @@
   display: flex;
   gap: 1.5rem;
 }
-
+    
 .bookBtn {
   background: #22d3ee; /* Cyan from image */
   color: white;

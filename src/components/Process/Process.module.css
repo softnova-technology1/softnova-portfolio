@@ -27,11 +27,140 @@
 }
 
 .diagramContainer {
+  flex: 1;
   position: relative;
   width: 100%;
-  max-width: 600px;
-  height: 600px;
-  margin: 0 auto;
+  max-width: 550px;
+  height: 550px;
+}
+
+.mainContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 2rem;
+}
+
+.detailPanel {
+  flex: 1;
+  max-width: 480px;
+  text-align: left;
+}
+
+.detailCard {
+  background: white;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--card-border);
+  animation: cardFadeIn 0.5s ease-out forwards;
+}
+
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.imageOverlay {
+  position: relative;
+  height: 240px;
+  width: 100%;
+}
+
+.detailImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageFade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to top, #ffffff, transparent);
+}
+
+.panelInfo {
+  padding: 2rem 2.5rem 2.5rem;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.stepNumber {
+  font-weight: 800;
+  color: var(--primary);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.panelIcon {
+  font-size: 1.5rem;
+  width: 45px;
+  height: 45px;
+  background: #f8fafc;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panelTitle {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--deep-navy);
+}
+
+.panelDescription {
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.panelFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.progressLine {
+  height: 4px;
+  background: #f1f5f9;
+  border-radius: 2px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.pLineActive {
+  height: 100%;
+  background: var(--primary);
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progressText {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.activeStep .stepContent {
+  background: var(--deep-navy);
+  color: white;
+  transform: scale(1.15);
+  box-shadow: 0 20px 40px rgba(0, 29, 57, 0.2);
+}
+
+.activeStep .stepIcon {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .circle {
@@ -63,6 +192,7 @@
   position: absolute;
   transform: translate(-50%, -50%);
   z-index: 20;
+  cursor: pointer;
 }
 
 .stepContent {
@@ -74,7 +204,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.1rem;
   transition: var(--transition);
 }
 
@@ -121,9 +251,17 @@
   to { stroke-dashoffset: 0; }
 }
 
+@media (max-width: 1024px) {
+  .mainContent {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
 @media (max-width: 768px) {
   .diagramContainer {
     height: 500px;
+    max-width: 450px;
   }
   .centerIcon {
     width: 80px;
@@ -131,4 +269,5 @@
   }
   .rocket { font-size: 2rem; }
   .stepContent { padding: 0.75rem 1.25rem; }
+  .panelTitle { font-size: 1.8rem; }
 }
