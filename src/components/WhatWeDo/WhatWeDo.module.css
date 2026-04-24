@@ -160,3 +160,34 @@
   .mainTitle { font-size: 2.5rem; }
   .pointsGrid { grid-template-columns: 1fr; }
 }
+
+.allServicesBtn {
+  /* margin-top: 1.5rem; */
+  padding: 1rem 1rem;
+  border-radius: 12px;
+  background: var(--deep-navy);
+  color: white;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition);
+  border: 1px solid var(--deep-navy);
+  text-decoration: none;
+}
+
+.allServicesBtn:hover {
+  background: transparent;
+  color: var(--deep-navy);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 29, 57, 0.1);
+}
+
+.btnArrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.allServicesBtn:hover .btnArrow {
+  transform: translate(3px, -3px);
+}

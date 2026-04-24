@@ -15,7 +15,7 @@ export default function Home() {
       <WhySoftNova />
       <WhatWeDo />
       <Process />
-      <TechStack />
+      {/* <TechStack /> */}
       <ContactCTA />
       <Footer />
     </main>

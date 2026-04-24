@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import styles from './WhatWeDo.module.css';
+import Link from 'next/link';
 import Image from 'next/image';
 
 const services = [
@@ -74,6 +75,11 @@ const WhatWeDo = () => {
                 <span className={styles.tabArrow}>→</span>
               </button>
             ))}
+            
+            <Link href="/services" className={styles.allServicesBtn}>
+              All Services
+              <span className={styles.btnArrow}>↗</span>
+            </Link>
           </div>
         </div>
 
