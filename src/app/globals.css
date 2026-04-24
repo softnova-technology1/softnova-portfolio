@@ -15,8 +15,7 @@
   --secondary: var(--teal-blue);
   --accent: var(--sky-blue);
   --soft-bg: var(--pale-ocean);
-  
-
+  --background: #f4f9ff;
   --foreground: #2d2633; /* Slightly warmer dark color */
   --card-bg: #ffffff;
   --card-border: var(--pale-ocean);
